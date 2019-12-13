@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 import axios from "axios";
+import { Route } from 'react-router-dom';
 
 import { SmurfContext } from "./../contexts/SmurfContext";
 
+
+import { MapSmurf } from "./MapSmurf";
 
 function App() {
   const [smurfsApiDate, setSmurfsApiDate] = useState([]);
@@ -29,6 +32,10 @@ function App() {
       <div>Have fun!</div>
 
       <SmurfContext.Provider value={{ smurfsApiDate }}>
+        <Route
+          exact path="/"
+          component={MapSmurf}
+        />
       </SmurfContext.Provider>
     </div>
   );
