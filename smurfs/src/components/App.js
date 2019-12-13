@@ -22,7 +22,7 @@ function App() {
       console.log("error", error.message)
     })
   },[])
-  console.log(smurfsApiDate);
+  //console.log(smurfsApiDate);
 
   return (
     <div className="App">

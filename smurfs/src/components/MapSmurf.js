@@ -1,6 +1,10 @@
 import React, { useContext }  from 'react';
+//import {withFormik, Form, Field } from "formik";
 
 import { SmurfContext } from "./../contexts/SmurfContext";
+
+import FormikForm from "./FormixFormPost";
+
 
 export const MapSmurf = () => {
 	const { smurfsApiDate } = useContext(SmurfContext);
@@ -18,6 +22,8 @@ export const MapSmurf = () => {
         </>
 			))}
 		</div>
+
+    <FormikForm />
     </>
 	);
 };
